@@ -19,3 +19,28 @@
     }
   ]
 }
+
+
+PART TWO MY EXAMPLE
+
+{
+  "Version": "2012-10-17",
+  "Id": "RestrictBucketToIAMUsersOnly",
+  "Statement": [
+    {
+      "Sid": "AllowOwnerOnlyAccess",
+      "Effect": "Deny",
+      "Principal": "*",
+      "Action": "s3:*",
+      "Resource": [
+        "arn:aws:s3:::oc23/*",
+        "arn:aws:s3:::oc23"
+      ],
+      "Condition": {
+        "StringNotEquals": {
+          "aws:PrincipalArn": "arn:aws:iam::677444467876444:root"
+        }
+      }
+    }
+  ]
+}
