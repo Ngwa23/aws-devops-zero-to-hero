@@ -5,4 +5,4 @@ set -e
 docker  pull ngwa23/simple-python-app:v1
 
 # Run the Docker image as a container
-docker run -d -p 5000:5000 gwa23/simple-python-app:v1
+docker run -d -p 5000:5000 ngwa23/simple-python-app:v1
